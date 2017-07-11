@@ -1,5 +1,5 @@
 General logic
-if minSize <= B + W:
+if minSize <= (B + W) / 2:
   return recursivePartition(B, W, minSize + 1) + sum([recursivePartition(B - minSize + i, W - i, minSize) for i in range(0,minSize+1)])
 else:
   return 1
