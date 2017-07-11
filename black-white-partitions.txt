@@ -1,3 +1,11 @@
+General logic
+if minSize <= B + W:
+  return recursivePartition(B, W, minSize + 1) + sum([recursivePartition(B - minSize + i, W - i, minSize) for i in range(0,minSize+1)])
+else:
+  return 1
+
+
+Scratch Work
 f(0,0) = 1
 
 f(1,0) = 1
@@ -14,7 +22,7 @@ b w|b
 b b w
 b b|w
 
-f(2,2) = 2
+f(2,2) = 9
 b|b|w|w
 b w|b|w
 b b w|w
